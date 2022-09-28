@@ -1,0 +1,37 @@
+
+    <div class="title">
+<h1> Afficher les films avec une api test </h1>
+<p>liste des films disponibe</p>
+</div>
+
+
+<div  class="tableau">
+  <table>
+    <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let movie of movies">
+        <tr>
+            <td class="descript">{{movie.title}}</td>
+            <td class ="descript">{{movie.description}}</td>
+            
+        </tr>
+    </tbody>
+</table>
+  
+</div>
+
+
+
+<div >
+    
+     <ul class="container">
+        <li (click)="movieSelected(i)" *ngFor="let movie of movies ; let i = index ">
+            <app-movie [movie]="movie"></app-movie>
+        </li>
+     </ul>
+    
+  </div>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { movies } from 'src/movies';
+import { Movie } from '../models/movie';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Movie_project';
+  
+  indexSelected?: number;
+  movieSelected?: Movie;
+
+  onSelected(i: number) {
+    this.indexSelected = i;
+      this.movieSelected = movies[i]
+  }
+
 }
