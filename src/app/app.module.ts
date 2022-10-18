@@ -20,7 +20,6 @@ import { AccueilComponent } from './accueil/accueil.component';
     MovieComponent,
     NavbarComponent,
     AccueilComponent,
-    CategoriesComponent
   ],
   imports: [
     BrowserModule,
