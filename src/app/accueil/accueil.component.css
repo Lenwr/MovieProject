@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.container app-api-movies {
+  margin-right: 20px;
+  /*height:900px;*/
+  /*overflow: auto;*/
+
+}
+.container app-movies-details {
+
+}
