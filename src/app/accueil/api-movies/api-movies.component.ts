@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { movies } from '../../../movies';
 import { Movie } from '../../../models/movie';
 import { Output, EventEmitter } from '@angular/core';
+import {MoviesService} from "../../movies.service";
 
 @Component({
   selector: 'app-api-movies',
@@ -14,10 +14,12 @@ export class APIMoviesComponent implements OnInit {
 
   movies: Movie[] = [];
 
-  constructor() { }
+  constructor(private _moviesService : MoviesService) {
+
+  }
 
   ngOnInit(): void {
-    this.movies = movies;
+    this.movies = this._moviesService.getMovies()
   }
 
 

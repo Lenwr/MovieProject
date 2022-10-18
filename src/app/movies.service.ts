@@ -2,7 +2,11 @@ import {Injectable, Injector} from "@angular/core";
 import {Movie} from "../models/movie";
 
 
-@Injectable()
+@Injectable(
+  {
+    providedIn: "root"
+  }
+)
 export class MoviesService{
   public getMovies(): Movie[] {
     return [

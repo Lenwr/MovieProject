@@ -11,6 +11,7 @@ import { NavbarComponent } from './accueil/navbar/navbar.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { AccueilComponent } from './accueil/accueil.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,8 +19,8 @@ import { AccueilComponent } from './accueil/accueil.component';
     MoviesDetailsComponent,
     MovieComponent,
     NavbarComponent,
-    CategoriesComponent,
-    AccueilComponent
+    AccueilComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,

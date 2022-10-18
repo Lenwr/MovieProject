@@ -1,8 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Output, EventEmitter} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Movie} from 'src/models/movie';
 import {ActivatedRoute, ParamMap} from "@angular/router";
-import {movies} from "../../../movies";
+import {MoviesService} from "../../movies.service";
 
 
 @Component({
@@ -13,15 +12,17 @@ import {movies} from "../../../movies";
 export class MoviesDetailsComponent implements OnInit {
 
   movie?: Movie;
+  movies: Movie[]=[];
   // @Input() index?: number;
 
   //definition d type de l input
   /*injection de dependance*/
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute , private _moviesService : MoviesService) {
 
   }
 
   ngOnInit(): void {
+    this.movies = this._moviesService.getMovies();
     // /users/1
     // /users/:id
     // id est un param comme pour nodejs
@@ -34,7 +35,7 @@ export class MoviesDetailsComponent implements OnInit {
 
       // ParseInt convertir number to string
       const index: number = parseInt(id);
-      this.movie = movies[index];
+      this.movie = this.movies[index];
     });
   }
 
