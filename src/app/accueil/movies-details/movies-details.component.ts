@@ -10,13 +10,16 @@ import { Movie } from 'src/models/movie';
 })
 export class MoviesDetailsComponent implements OnInit {
 
-  @Input() movieSelected?: Movie;
+  movie?: Movie;
+  // @Input() index?: number;
 
   //definition d type de l input
+  /*injection de dependance*/
+  constructor(private route: ActivatedRoute) {
 
-  constructor() { }
+  }
 
   ngOnInit(): void {
   }
-  
+
 }

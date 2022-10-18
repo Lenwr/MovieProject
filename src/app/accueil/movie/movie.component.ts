@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { movies } from '../../movies';
-import { Movie } from '../../models/movie';
+import { movies } from '../../../movies';
+import {Movie} from "../../../models/movie";
 
 
 @Component({
@@ -9,11 +9,16 @@ import { Movie } from '../../models/movie';
   styleUrls: ['./movie.component.css']
 })
 export class MovieComponent implements OnInit {
-      
-  constructor() { }
+ @Input() movie?: Movie;
+
+
+
+  constructor() {
+
+  }
 
   ngOnInit(): void {
-   
+
   }
 
 }

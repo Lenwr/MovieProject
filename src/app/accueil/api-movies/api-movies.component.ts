@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { movies } from '../../movies';
-import { Movie } from '../../models/movie';
+import { movies } from '../../../movies';
+import { Movie } from '../../../models/movie';
 import { Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -12,7 +12,7 @@ export class APIMoviesComponent implements OnInit {
 
   @Output() selected = new EventEmitter<number>();
 
-  movies: Movie[] = []
+  movies: Movie[] = [];
 
   constructor() { }
 

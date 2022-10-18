@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { movies } from 'src/movies';
-import { Movie } from '../models/movie';
+import {Component} from '@angular/core';
+import {movies} from 'src/movies';
+import {Movie} from '../models/movie';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +8,16 @@ import { Movie } from '../models/movie';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  indexSelected?: number;
-  movieSelected?: Movie;
 
-  onSelected(i: number) {
-    this.indexSelected = i;
-      this.movieSelected = movies[i]
-  }
+
+
+  // onSelected(i: number) {
+  //   if (this.indexSelected === i && this.movieSelected !== undefined){
+  //     this.movieSelected = undefined;
+  //   } else {
+  //     this.indexSelected = i;
+  //     this.movieSelected = movies[i]
+  //   }
+  // }
 
 }

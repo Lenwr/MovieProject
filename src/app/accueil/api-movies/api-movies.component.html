@@ -1,0 +1,12 @@
+
+<div>
+  <ul class="container">
+<!--    <li [routerLink]="'movies/' + i" *ngFor="let movie of movies; let i = index;">-->
+<!--    /movies/4/categories/2/trending pour un tableau ['movies', i, 'categories', '2', 'trending'] -->
+    <li [routerLink]="['movies', i]" *ngFor="let movie of movies; let i = index;">
+
+      <app-movie [movie]="movie"></app-movie>
+    </li>
+  </ul>
+</div>
+
