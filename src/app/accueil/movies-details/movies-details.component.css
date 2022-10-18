@@ -1,20 +1,25 @@
-.detail {
+.container {
   display: flex;
+ flex-direction: column;
   align-items: center;
 
 }
 .detail img {
+  margin-top: 40px;
   width: 700px;
   height: 700px;
   border-radius: 10px;
   box-shadow: 0 0 20px 5px grey;
 }
-.description {
-  display: flex;
+.description{
   width: 700px;
+  align-items: center;
+
 }
 .text-description  ,.text-realisateur{
   font-size: x-large;
   font-weight: bold;
   text-decoration: underline;
+  align-items: center;
+
 }
