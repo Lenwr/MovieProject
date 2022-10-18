@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/Router';
+
 
 @Component({
   selector: 'app-categories',
@@ -8,7 +8,7 @@ import {Router} from '@angular/Router';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor(private router:Router) {
+  constructor() {
 
   }
 
